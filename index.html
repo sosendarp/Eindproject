@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eindproject</title>
+    <h1 id="h1">Spookhuis</h1>
+    <link rel="preload" href="media/spookymansion.jpg" as="image">
+    <link rel="preload" href="media/bathroom3.png" as="image">
+    <link rel="preload" href="media/bg3.jpg" as="image">
+    <link rel="preload" href="media/nightsky.jpg" as="image">
+    <link rel="preload" href="media/stairup.jpg" as="image">
+    <link rel="preload" href="media/b1.jpg" as="image">
+    <link rel="preload" href="media/creepystairs.jpg" as="image">
+    <link rel="preload" href="media/exit.jpg" as="image">
+    <link rel="preload" href="media/basement.jpg" as="image">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="div1">
+    <div id="textdiv1">
+        Op een zekere avond ben je op de fiets onderweg naar huis, maar ineens
+        klapt je band. De batterij van je telefoon is leeg en het is nog ver fietsen.
+        Gelukkig staat op een paar meter afstand een groot huis, waar je
+        wellicht om hulp kunt vragen. Je klopt aan, maar er volgt geen reactie.
+        Plotseling gaat de deur vanzelf open. Durf je naar binnen te gaan in
+        de hoop je fiets te kunnen repareren?
+    </div>
+    <div id="textdiv2"></div>
+    <div id="textdiv3"></div>
+    <div id="textdiv4"></div>
+    <input id="ingang" type="image" src="" name="enter" hidden onclick="enter()"></input>
+    <label id="labelingang" for="ingang">Klik hier om naar binnen te gaan</label>
+
+    <div id="popups">
+        <img id="ghoul" src="media/ghoultp.png" style="display:none" alt="">
+        <img id="ghoulout" src="media/ghoultp.png" style="display:none" alt="">
+        <video id="jeff" src="media/jeff.mp4" style="display:none"></video>
+    </div>
+    <audio id="bgm" src="media/bgm.mp3"></audio>
+    <audio id="scream" src="media/mummyconvert.wav"></audio>
+    <div id="gameover"></div>
+    <div id="opnieuw" style="display:none">
+        <a href=".">Opnieuw proberen</a>
+    </div>
+
+    <div id="rooms">
+        <div class="rooms" id="stairup" style="display:none">
+            <img class="stairup" src="media/stairs.png" onclick="change_stairs()">
+            <span>Trap</span>
+        </div>
+        <div class="rooms" id="sdoor" style="display:none">
+            <img class="sdoor" src="media/wooddoor.png" onclick="change_sdoor()">
+            <span>Kleine deur</span>
+        </div>
+        <div class="" id="stairdown" style="display:none">
+            <input class="stairdown" id="idstairdown" type="image" src="" onclick="change_basement1()" hidden>
+            <label id="labelsd" for="idstairdown" hidden>Naar beneden</label>
+        </div>
+        <div class="" id="stairdown2" style="display:none">
+            <input class="stairdown" id="idstairdown2" type="image" src="" onclick="change_basement2()" hidden>
+            <label id="labelsd2" for="idstairdown2" hidden>Naar beneden</label>
+        </div>
+        <div class="rooms" style="display:none" id="entrance">
+            <img class="entrance" src="media/return.png" onclick="change_entrance()">
+            <span>Terug naar de ingang</span>
+        </div>
+        <div class="rooms" style="display:none" id="return2">
+            <img class="return2" src="media/return.png" onclick="change_upper()">
+            <span>Terug naar de bovenhal</span>
+        </div>
+        <div class="rooms" id="bdoor1" style="display:none">
+            <img class="bdoor1" src="media/wooddoor.png" onclick="change_bdoor1()">
+            <span>Grote deur</span>
+        </div>
+        <div class="rooms" style="display:none" id="bdoor2">
+            <img class="bdoor2" src="media/wooddoor.png" onclick="change_bdoor2()">
+            <span>Grote deur</span>
+        </div>
+        <div class="rooms" id="return1" style="display:none">
+            <img class="return1" src="media/return.png" onclick="change_ret1()">Terug
+            <span>Terug naar buiten</span>
+        </div>
+        <div class="rooms" style="display:none" id="bedroom1v1">
+            <img class="bedroom1v1" src="media/wooddoor.png" onclick="change_bed1v1()">
+            <span>Slaapkamer 1</span>
+        </div>
+        <div class="rooms" style="display:none" id="bedroom1v2">
+            <img class="bedroom1v2" src="media/wooddoor.png" onclick="change_bed1v2()">
+            <span>Slaapkamer 1</span>
+        </div>
+        <div class="rooms" style="display:none" id="bedroom2">
+            <img class="bedroom2" src="media/wooddoor.png" onclick="change_bed2()">
+            <span>Slaapkamer 2</span>
+        </div>
+        <div class="rooms" style="display:none" id="bathroom">
+            <img class="bathroom" src="media/wooddoor.png" onclick="change_bath()">
+            <span>Badkamer</span>
+        </div>
+        <div class="" id="exit" style="display:none">
+            <input class="exit" id="idexit" type="image" src="" onclick="change_exit()" hidden>
+            <label id="labelex" for="idexit">Verdergaan</label>
+        </div>
+        <div class="" id="escape" style="display:none">
+            <input class="escape" id="idescape" type="image" src="" onclick="change_escape()" hidden>
+            <label id="labelesc" for="idescape">Ontsnappen!</label>
+        </div>
+
+        <div id="flashlight" style="display:none">
+            <img class="flashlight" src="media/zaklamp.png" onclick="get_flashlight()">
+        </div>
+        <div id="amulet" style="display:none">
+            <img class="amulet" src="media/amuletpan.png" onclick="get_amulet()">
+        </div>
+    </div>
+    <script src="eindscript.js"></script>
+</body>
+
+</html>
